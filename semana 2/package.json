@@ -1,0 +1,23 @@
+{
+  "name": "appwebii-b",
+  "version": "1.0.0",
+  "description": "primer proyecto",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LMoralesSnchez/APPWEBII-B.git"
+  },
+  "keywords": [
+    "introduccion",
+    "js"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LMoralesSnchez/APPWEBII-B/issues"
+  },
+  "homepage": "https://github.com/LMoralesSnchez/APPWEBII-B#readme"
+}
