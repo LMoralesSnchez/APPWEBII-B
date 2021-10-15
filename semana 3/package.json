@@ -1,0 +1,14 @@
+{
+  "name": "semana-3",
+  "version": "1.0.0",
+  "description": "primer avance",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "descripcion"
+  ],
+  "author": "LMS",
+  "license": "ISC"
+}
