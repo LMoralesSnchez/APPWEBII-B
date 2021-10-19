@@ -37,7 +37,7 @@ const paises = [
   },
   {
     id: 2,
-    descripcion: "PerU",
+    descripcion: "Peru",
   },
 ];
 function busquedaPaisporID(id, callback) {
@@ -86,6 +86,7 @@ busquedaLibroporId(1, (err, libro) => {
       }
       libro.pais = pais;
       libro.autor = autor;
+      delete libro.idActor;
       delete libro.idPais;
       console.log(libro);
     });
