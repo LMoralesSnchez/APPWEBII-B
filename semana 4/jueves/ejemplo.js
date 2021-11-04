@@ -14,9 +14,9 @@ const conecion =
   const Usuario = mongoose.model("usuario", {
     nombre: String,
   });
-  const Usuario1 = new Usuario({
-    nombre: "Majo",
-  });
+  // const Usuario1 = new Usuario({
+  //   nombre: "Majo",
+  // });
 
   const guardoUsuario = await Usuario1.save();
   const resultado = await Usuario.find();
