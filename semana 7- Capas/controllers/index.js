@@ -1,5 +1,7 @@
-const Producto = require("./producto.controllers");
+const Producto = require("./producto");
+const Categoria = require("./categoria");
 
 module.exports = {
   Producto,
+  Categoria,
 };

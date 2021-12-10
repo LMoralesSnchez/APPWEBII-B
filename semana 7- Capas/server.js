@@ -6,7 +6,8 @@ const { dbConnecion } = require("./database/config");
 
 class Server {
   constructor() {
-    this.app = express();
+    this.app = express.Router();
+    this.router = express.Router();
     this.port = process.env.PORT;
 
     this.paths = {
@@ -17,6 +18,9 @@ class Server {
     this.conectarDB();
     this.middlewares();
     this.routes();
+    this.router.use("/v1/pruebas", this.app);
+
+    this._express = express().use(this.router);
   }
   /// ASOCIAR RUTAS, MIDDKEWARES, LEVANTAR BASE DE DATOS
   async conectarDB() {
@@ -30,7 +34,7 @@ class Server {
     this.app.use(this.paths.productos, require("./routes/producto.routers"));
   }
   listen() {
-    this.app.listen(this.port, () => {
+    this._express.listen(this.port, () => {
       console.log(`Servidor corriendo en el puerto ${this.port}`);
     });
   }

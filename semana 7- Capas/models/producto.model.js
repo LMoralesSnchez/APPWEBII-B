@@ -1,6 +1,6 @@
 const { Schema, model } = require("mongoose");
 
-const ProductoSchema = new Schema({
+const ProductoSchema = Schema({
   nombre: {
     type: String,
     required: [true, "El nombre es obligatorio"],
@@ -9,19 +9,24 @@ const ProductoSchema = new Schema({
   estado: {
     type: Boolean,
     default: true,
-    require: true,
+    required: true,
   },
   precio: {
     type: Number,
-    default: true,
+    default: 0,
   },
   costo: {
     type: Number,
-    default: true,
+    default: 0,
   },
   minimo: {
     type: Number,
     default: 0,
+  },
+  categoria: {
+    type: Schema.Types.ObjectId,
+    ref: "Categoria",
+    required: true,
   },
 });
 
